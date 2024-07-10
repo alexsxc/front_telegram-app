@@ -36,7 +36,27 @@ body {
 }
 
 .btn.btn_inline {
-	display: inline-flex;
+	width: 60px;
+	cursor: pointer;
+}
+
+.position_goods_num {
+	position: relative;
+}
+
+.num_goods {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 4%;
+	right: 4%;
+	background-color: #D85454;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+	color: white;
+
 }
 
 .btn:hover {
@@ -178,6 +198,7 @@ nav ul li.active:after {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	gap: 7px;
 }
 
 .catalog.catalog_rows .item:last-child {
@@ -186,7 +207,7 @@ nav ul li.active:after {
 
 .catalog.catalog_rows .item .item_image {
 	width: 100px;
-	height: auto;
+	height: 100%;
 }
 
 .catalog.catalog_rows .item .item_data {
@@ -226,13 +247,13 @@ nav ul li.active:after {
 }
 
 .catalog.catalog_cart .item .item_meta {
-	padding: 10px 0;
+	margin: -18px 0
 }
 
 .item_q {
 	display: flex;
 	height: 30px;
-
+	align-items: center;
 	border-radius: 6px;
 	display: inline-flex;
 	overflow: hidden;
@@ -247,11 +268,12 @@ nav ul li.active:after {
 
 .item_q button {
 	width: 30px;
-	background: #efefef;
+	background: white;
 	border: 1px solid #efefef;
 	font-size: 14px;
 	font-weight: bolder;
 	border: none;
+	cursor: pointer;
 }
 
 .catalog.catalog_item {
@@ -346,6 +368,7 @@ nav ul li.active:after {
 	text-decoration: line-through;
 	margin-left: 10px;
 	font-weight: 300;
+	font-size: 12px;
 	color: #696969;
 }
 
@@ -390,4 +413,72 @@ nav ul li.active:after {
 	color: #333;
 	text-decoration: none;
 	font-weight: bolder;
+}
+
+
+
+.calculator_tab {
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	bottom: 14% !important;
+	z-index: 99;
+	left: 0;
+	background-color:#ffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;-webkit-box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.result {
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.left_calck {
+	display: flex;
+	gap: 10px;
+
+}
+
+.res_old_price {
+	margin-top: -2px;
+	font-size: 10px;
+	text-decoration: line-through;
+	color: rgb(105, 105, 105);
+}
+
+.result_price {
+	margin-top: 7px;
+	font-size: 17px;
+	font-weight: 700;
+	color: rgb(216, 84, 84);
+}
+
+.tab_cart {
+	position: relative;
+	margin-bottom: 100px;
+}
+
+.right_calck {
+	width: 200px;
+	height: 40px;
+	border-radius: 15px;
+	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.right_calck a {
+	text-decoration: none;
+	font-size: 16px;
+	color: black;
+	font-weight: 100;
 }
