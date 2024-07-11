@@ -43,8 +43,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab tab_main tab_active">
+                <div class="tab tab_shopping tab_active">
                     <div class="catalog">
+                        <div style="position: fixed; z-index: 11;     margin-left: 315px;
+    margin-top: 600px;">
+                            <button onclick="openModal()" style="padding: 14px 30px; background-color: #559A53; border: none; color: aliceblue; font-size: 18px;">
+                                Добавить
+                            </button>
+                        </div>
                         <a class="item openProduct">
                             <div class="item_image">
                                 <div class="picture_slide_box"><img height="100%" width="60%" src="./public/Group 32.png" alt=""></div>
@@ -80,7 +86,7 @@
                                 </div>
                                 <p class="item_title">Фарфоровая фигурка "Лисица кицуне"</p>
                                 <button type="button" class="btn addToCart"><img width="10px" src="./icon/Plus.png"
-										alt=""> Добавить в корзину</button>
+										alt="">Изменить</button>
                             </div>
                         </a>
                         <a class="item openProduct">
@@ -99,7 +105,7 @@
                                 </div>
                                 <p class="item_title">Фарфоровая фигурка "Лисица кицуне"</p>
                                 <button type="button" class="btn addToCart"><img width="10px" src="./icon/Plus.png"
-										alt=""> Добавить в корзину</button>
+										alt="">Изменить</button>
                             </div>
                         </a>
                         <a class="item openProduct">
@@ -118,7 +124,7 @@
                                 </div>
                                 <p class="item_title">Фарфоровая фигурка "Лисица кицуне"</p>
                                 <button type="button" class="btn addToCart"><img width="10px" src="./icon/Plus.png"
-										alt=""> Добавить в корзину</button>
+										alt="">Изменить</button>
                             </div>
                         </a>
                         <a class="item openProduct">
@@ -137,7 +143,7 @@
                                 </div>
                                 <p class="item_title">Фарфоровая фигурка "Лисица кицуне"</p>
                                 <button type="button" class="btn addToCart"><img width="10px" src="./icon/Plus.png"
-										alt=""> Добавить в корзину</button>
+										alt="">Изменить</button>
                             </div>
                         </a>
                         <a class="item openProduct">
@@ -156,7 +162,7 @@
                                 </div>
                                 <p class="item_title">Фарфоровая фигурка "Лисица кицуне"</p>
                                 <button type="button" class="btn addToCart"><img width="10px" src="./icon/Plus.png"
-										alt=""> Добавить в корзину</button>
+										alt="">Изменить</button>
                             </div>
                         </a>
                         <a class="item openProduct">
@@ -175,7 +181,7 @@
                                 </div>
                                 <p class="item_title">Фарфоровая фигурка "Лисица кицуне"</p>
                                 <button type="button" class="btn addToCart"><img width="10px" src="./icon/Plus.png"
-										alt=""> Добавить в корзину</button>
+										alt="">Изменить</button>
                             </div>
                         </a>
                         <a class="item openProduct">
@@ -194,7 +200,7 @@
                                 </div>
                                 <p class="item_title">Фарфоровая фигурка "Лисица кицуне"</p>
                                 <button type="button" class="btn addToCart"><img width="10px" src="./icon/Plus.png"
-										alt=""> Добавить в корзину</button>
+										alt="">Изменить</button>
                             </div>
                         </a>
                     </div>
@@ -274,7 +280,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab tab_cart">
+                <div class="tab tab_filter">
                     <div class="tab_title">
                         <p>Корзина</p>
                     </div>
@@ -370,25 +376,74 @@
         <nav>
             <div class="contaienr">
                 <ul>
-                    <li class="active">
-                        <a href="javascript:void(0);" data-tab="main" class="openTab">
-                            <i class="icon icon_shop"></i>
-                        </a>
-                    </li>
-                    <li>
+                    <li class="">
                         <a href="javascript:void(0);" data-tab="orders" class="openTab">
                             <i class="icon icon_orders"></i>
                         </a>
                     </li>
+                    <li class="active">
+                        <a href="javascript:void(0);" data-tab="shopping" class="openTab">
+                            <i class="icon icon_shopping"></i>
+                        </a>
+                    </li>
                     <li>
-                        <a href="javascript:void(0);" data-tab="cart" class="openTab">
-                            <i class="icon icon_cart"></i>
+                        <a href="javascript:void(0);" data-tab="filter" class="openTab">
+                            <i class="icon icon_filter"></i>
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="container">
+                <div class="header">
+                    <h1>Сибирская лавка</h1>
+                </div>
+                <div class="product-id">
+                    Товар: <span id="product-id">12</span>
+                </div>
+                <div class="photo-upload">
+                    <span>Добавить фото</span>
+                </div>
+                <div class="input-group">
+                    <label for="product-name">Название</label>
+                    <input type="text" id="product-name" value="Фарфоровая фигурка “Лисица кицунэ”">
+                </div>
+                <div class="input-group">
+                    <label for="price">Цена за штуку</label>
+                    <input type="number" id="price" value="400000">
+                </div>
+                <div class="input-group">
+                    <label for="discount">Скидка</label>
+                    <input type="text" id="discount" value="20%">
+                    <div class="total">Итог: 320000</div>
+                </div>
+                <div class="input-group">
+                    <label for="quantity">Количество</label>
+                    <input type="number" id="quantity" value="100">
+                </div>
+                <div class="input-group">
+                    <label for="manager-approval">Подтверждение менеджера</label>
+                    <input type="checkbox" id="manager-approval" checked>
+                </div>
+                <div class="input-group">
+                    <label for="active">Активен</label>
+                    <input type="checkbox" id="active">
+                </div>
+                <div class="input-group">
+                    <label for="description">Описание</label>
+                    <textarea id="description" rows="4">Фарфоровая фигурка “Лисица кицунэ”</textarea>
+                </div>
+                <div class="buttons">
+                    <button class="save-btn">Сохранить</button>
+                    <button class="delete-btn">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
