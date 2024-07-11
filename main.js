@@ -65,3 +65,22 @@ window.onclick = function(event) {
 closeModal.onclick = function() {
     modal.style.display = 'none'
 }
+
+// calc
+let minus = document.querySelectorAll('.item_qm')
+let plus = document.querySelectorAll('.item_qp')
+let num = document.querySelector('.item_q input')
+
+plus.forEach(btn => {
+    btn.onclick = () => {
+        num.value++
+    }
+});
+minus.forEach(btn => {
+    btn.onclick = () => {
+        num.value--
+            if (num.value <= 0) {
+                num.value = 0
+            }
+    }
+});
