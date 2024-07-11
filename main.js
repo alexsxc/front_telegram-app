@@ -4,12 +4,12 @@ tg.MainButton.hide();
 
 
 
-jQuery(function($) {
-    $(document).ready(function() {
+jQuery(function ($) {
+    $(document).ready(function () {
 
         $('.catalog_item').css('height', $(window).height() - 90);
 
-        $(document).on('click', '.openTab', function() {
+        $(document).on('click', '.openTab', function () {
 
             var thisTab = $(this).data('tab');
             var thisTabObject = $('.tab.tab_' + thisTab);
@@ -27,7 +27,7 @@ jQuery(function($) {
 
         });
 
-        $(document).on('click', '.openProduct', function() {
+        $(document).on('click', '.openProduct', function () {
 
             $('.tab').removeClass('tab_active');
             $('.tab_product').addClass('tab_active');
@@ -36,7 +36,7 @@ jQuery(function($) {
 
         });
 
-        $(document).on('click', '.item_gradient', function() {
+        $(document).on('click', '.item_gradient', function () {
 
             $(this).parent().parent().addClass('open');
             $(this).remove();
@@ -53,34 +53,64 @@ const modal = document.getElementById('myModal')
 const closeModal = document.querySelector('.delete-btn')
 
 function
-openModal() {
+    openModal() {
     modal.style.display = 'flex'
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = 'none'
     }
-}
-closeModal.onclick = function() {
+}/* 
+closeModal.onclick = function () {
     modal.style.display = 'none'
-}
+} */
 
 // calc
-let minus = document.querySelectorAll('.item_qm')
-let plus = document.querySelectorAll('.item_qp')
-let num = document.querySelector('.item_q input')
+let minus = document.querySelector('.white_min')
+let plus = document.querySelector('.white_pl')
+let main_goods = document.querySelectorAll(".openProduct")
+let done_modal = document.querySelector('.contaienr')
+let middle_add_btn = document.querySelector('.middle_add_btn')
+let quantity_goods_btn = document.querySelector('.quantity_goods')
+let num_goods_add_num = document.querySelector('.num_goods_add')
+let left_back = document.querySelector('.left_back')
+let fixed_done_manipulator = document.querySelector('.fixed_done_manipulator')
 
-plus.forEach(btn => {
-    btn.onclick = () => {
-        num.value++
+middle_add_btn.onclick = () => {
+    middle_add_btn.style.display = "none"
+    quantity_goods_btn.style.display = "flex"
+}
+
+plus.onclick = () => {
+    num_goods_add_num.innerHTML++
+}
+
+minus.onclick = () => {
+    num_goods_add_num.innerHTML--
+    if (num_goods_add_num.innerHTML <= 0) {
+        num_goods_add_num.innerHTML = 1
     }
-});
-minus.forEach(btn => {
+    console.log('click');
+}
+
+left_back.onclick = () => {
+    done_modal.style.display = "block"
+    fixed_done_manipulator.style.display = "none"
+}
+main_goods.forEach(btn => {
     btn.onclick = () => {
-        num.value--
-            if (num.value <= 0) {
-                num.value = 0
-            }
+        done_modal.style.display = "none"
+        fixed_done_manipulator.style.display = "flex"
+
     }
-});
+})
+
+
+
+var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });

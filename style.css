@@ -1,6 +1,5 @@
 body {
 	font-family: 'Gotham Pro', sans-serif;
-	background: #f3f3f3;
 	font-size: 12px;
 	overflow-x: hidden;
 }
@@ -502,3 +501,105 @@ nav ul li.active:after {
 	color: black;
 	font-weight: 100;
 }
+
+
+
+
+.tab_product {
+	position: relative;
+}
+
+.fixed_done_manipulator {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-top: 1px solid rgb(207, 207, 207);
+	padding: 18px 0;
+	cursor: pointer;
+	background-color: white;
+	left: 0;
+}
+
+.middle_add_btn {
+	width: 50%;
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	border-radius: 100px;
+	border: 1px solid rgb(24, 24, 24);
+	background-color: #ffff;
+	cursor: pointer;
+}
+
+.quantity_goods {
+	width: 50%;
+	height: 35px;
+	display: none;
+	align-items: center;
+	justify-content: space-between;
+	gap: 4px;
+	border-radius: 1000px;
+	background-color: #ffff;
+	cursor: pointer;
+	background-color: #6fad6c;
+	color: #fff;
+}
+
+.num_goods_add {
+	font-size: 14px;
+	font-weight: 700;
+
+}
+
+.white_min {
+	width: 20%;
+	height: 100%;
+	border-top-left-radius: 17px;
+	border-bottom-left-radius: 17px;
+	cursor: pointer;
+	border: 0;
+	background-color: #5EA95B !important;
+	display: flex;
+	align-items: center;
+justify-content: center;}
+
+.white_pl {
+	/* Сделает изображение белым */
+	width: 20%;
+	height: 100%;
+	border: 0;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	cursor: pointer;
+	background-color: #5EA95B !important;
+	display: flex;
+	align-items: center;
+justify-content: center;
+
+}
+.white_min img, .white_pl img{
+    filter: brightness(0) invert(1); /* Сделает изображение белым */
+
+}
+
+
+
+.swiper {
+	width: 100%;
+	height: 100%;
+  }
+
+  .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
