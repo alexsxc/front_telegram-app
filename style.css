@@ -566,7 +566,8 @@ nav ul li.active:after {
 	background-color: #5EA95B !important;
 	display: flex;
 	align-items: center;
-justify-content: center;}
+	justify-content: center;
+}
 
 .white_pl {
 	/* Сделает изображение белым */
@@ -579,11 +580,14 @@ justify-content: center;}
 	background-color: #5EA95B !important;
 	display: flex;
 	align-items: center;
-justify-content: center;
+	justify-content: center;
 
 }
-.white_min img, .white_pl img{
-    filter: brightness(0) invert(1); /* Сделает изображение белым */
+
+.white_min img,
+.white_pl img {
+	filter: brightness(0) invert(1);
+	/* Сделает изображение белым */
 
 }
 
@@ -592,14 +596,23 @@ justify-content: center;
 .swiper {
 	width: 100%;
 	height: 100%;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
 	text-align: center;
 	font-size: 18px;
 	background: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  }
+}
 
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+	color: rgba(255, 0, 0, 0.514);
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+	color: rgba(255, 0, 0, 0.514);
+}

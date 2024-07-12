@@ -114,3 +114,12 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
+
+
+
+
+  let catalog_item= document.querySelectorAll('.item_length .item')
+let num_goods = document.querySelector('.num_goods')
+
+num_goods.innerHTML= catalog_item.length
+  console.log(catalog_item);
