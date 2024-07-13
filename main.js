@@ -110,16 +110,58 @@ main_goods.forEach(btn => {
 
 var swiper = new Swiper(".mySwiper", {
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
-  });
+});
 
 
 
 
-  let catalog_item= document.querySelectorAll('.item_length .item')
+let catalog_item = document.querySelectorAll('.item_length .item')
 let num_goods = document.querySelector('.num_goods')
 
-num_goods.innerHTML= catalog_item.length
-  console.log(catalog_item);
+num_goods.innerHTML = catalog_item.length
+
+let items_counter = document.querySelectorAll('.item_controls .item_q');
+let totalPriceElement = document.querySelector('.result_price span#total-price');
+function updateTotalPrice() {
+    let totalPrice = 0;
+    document.querySelectorAll('.catalog_cart .item_data').forEach(itemData => {
+        const priceElement = itemData.querySelector('.price');
+        const price = parseFloat(priceElement.getAttribute('data-price'));
+        const quantity = parseInt(itemData.querySelector('input').value);
+        totalPrice += price * quantity;
+    });
+    totalPriceElement.textContent = totalPrice.toFixed(2);
+}
+
+items_counter.forEach(item => {
+    const minusButton = item.querySelector('.item_qm');
+    const plusButton = item.querySelector('.item_qp');
+    const input = item.querySelector('input');
+
+    minusButton.addEventListener('click', () => {
+        input.value = parseInt(input.value) - 1;
+        if (input.value <= 0) {
+            input.value = 1;
+        }
+        updateTotalPrice();
+    });
+
+    plusButton.addEventListener('click', () => {
+        input.value = parseInt(input.value) + 1;
+        updateTotalPrice();
+    });
+});
+
+// Initial calculation of the total price
+updateTotalPrice();
+
+// Event listener for checkout button
+
+
+
+let res_old_price = document.querySelector('.res_old_price')
+console.log(res_old_price);
+res_old_price.innerHTML = totalPriceElement.textContent+2000 
