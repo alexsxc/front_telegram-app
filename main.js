@@ -1,52 +1,52 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
-tg.MainButton.hide();
-
-
 
 jQuery(function ($) {
     $(document).ready(function () {
-
         $('.catalog_item').css('height', $(window).height() - 90);
 
         $(document).on('click', '.openTab', function () {
-
             var thisTab = $(this).data('tab');
             var thisTabObject = $('.tab.tab_' + thisTab);
             if (!thisTabObject) {
                 return false;
             }
-
-            $('.tab').removeClass('tab_active')
+            $('.tab').removeClass('tab_active');
             thisTabObject.addClass('tab_active');
-
             $('ul').find('li').removeClass('active');
             $(this).parent().addClass('active');
-
             return false;
-
         });
 
         $(document).on('click', '.openProduct', function () {
-
             $('.tab').removeClass('tab_active');
             $('.tab_product').addClass('tab_active');
-
             return false;
-
         });
 
         $(document).on('click', '.item_gradient', function () {
-
             $(this).parent().parent().addClass('open');
             $(this).remove();
-
             return false;
-
         });
 
+        // Новый код jQuery для обработки кликов по элементам .item
+        $(document).on('click', '.item_length .item', function () {
+            $('.tab_orders').hide();
+            $('.orders_open_window').show();
+        });
+
+        // Обработка клика по кнопке back___btn
+        $(document).on('click', '.back___btn', function () {
+            $('.orders_open_window').hide();
+            $('.tab_orders').show();
+            $('.fixed_done_manipulator_order').hide();
+            return false;
+        });
     });
 });
+
+
 
 // modal
 const modal = document.getElementById('myModal')
@@ -164,4 +164,28 @@ updateTotalPrice();
 
 let res_old_price = document.querySelector('.res_old_price')
 console.log(res_old_price);
-res_old_price.innerHTML = totalPriceElement.textContent+2000 
+res_old_price.innerHTML = totalPriceElement.textContent + 2000
+
+
+
+
+let items_open_ = document.querySelectorAll('.item_length .item')
+let orders_open_window = document.querySelector('.orders_open_window')
+let monipulator_mod = document.querySelector('.fixed_done_manipulator_order')
+let back___btn = document.querySelectorAll('.back___btn')
+items_open_.forEach(item => {
+    item.onclick = () => {
+        done_modal.style.display = "none"
+        monipulator_mod.style.display = "flex"
+    }
+});
+back___btn.forEach(btn => {
+
+    btn.onclick = () => {
+        done_modal.style.display = "block"
+
+        monipulator_mod.style.display = "none"
+
+    }
+});
+console.log(items_open_); 

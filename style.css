@@ -1,8 +1,11 @@
+
+
 body {
 	font-family: 'Gotham Pro', sans-serif;
 	font-size: 12px;
 	overflow-x: hidden;
 }
+
 
 /* BTN */
 .btn {
@@ -615,4 +618,135 @@ nav ul li.active:after {
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
 	color: rgba(255, 0, 0, 0.514);
+}
+
+
+
+.orders_open_window {
+	width: 100%;
+	height: 100%;
+	display: none;
+	padding: 40px 0;
+	position: relative;
+
+}
+.addr{
+	margin-bottom: 100px;
+}
+.orders_open_window hr{
+	height: 0;
+	border: none;
+	border-top: 1px solid #333;
+color: #181818;
+}
+
+.status_elem,
+.create_elem {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.status_elem{
+	margin-bottom: -20px;
+	margin-top: -10px;
+}
+.left_width {
+	width: 70px;
+	color: rgb(24, 24, 24);
+	font-size: 18px;
+	max-height: 0%;
+
+}
+.status_color{
+	background-color: #D75A32;
+	font-size: 14px;
+	padding: 5px;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: 300;
+}
+.items_case{
+	height: 400px;
+	overflow: scroll;
+}
+.items_case, .item{
+	margin-bottom: 15px;
+}
+.status_elem,
+.create_elem p {
+	font-size: 17px;
+}
+.back_ordernum_box{
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+.back_ordernum_box p{
+	font-size: 22px;
+	display: flex;
+	color: #181818;
+}
+
+
+.goods_text{
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: -5px;
+}
+
+.left_block_bg_{
+width: 100px;
+height: 135px;
+}
+.items_case .item{
+	display: flex;
+	gap: 5px;
+} 
+.right_block_txt{
+	font-size:15px;
+	color: #181818;
+	font-weight: 500;
+}
+
+.info_goods{
+	margin-top: 50px;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: -5px;
+}
+
+.email_hrefs_box p{
+	margin-bottom: -2px;
+	font-size: 14px;
+	color: #181818;
+
+}
+.arrow_txt{
+	margin-left: 5px;
+}
+
+.arrow_txt a{
+	text-decoration: none;
+color: #181818;
+font-size: 14px;
+}
+
+.midle_margin{
+	margin: 20px 0;
+}
+
+.fixed_done_manipulator_order{
+	position: absolute;
+	bottom:0%;
+	width: 100%;
+	height: 50px;
+	display: none;
+	align-items: center;
+	justify-content: space-around;
+	border-top: 1px solid rgb(207, 207, 207);
+	cursor: pointer;
+	background-color: white;
+	left: 0;
+	margin-top: 5px;
+	padding-top: 5px;
 }
