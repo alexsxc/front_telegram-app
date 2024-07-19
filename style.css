@@ -404,6 +404,7 @@ nav ul li.active:after {
 
 .catalog .item .item_description {
     line-height: 25px;
+    overflow: hidden;
     font-size: 14px;
     color: #575757;
     position: relative;
@@ -665,8 +666,8 @@ nav ul li.active:after {
 }
 
 .items_case {
-    height: 400px;
-    overflow: scroll;
+    height: 100%;
+    overflow: hidden;
 }
 
 .items_case,
@@ -741,7 +742,7 @@ nav ul li.active:after {
 }
 
 .fixed_done_manipulator_order {
-    position: absolute;
+    position: fixed;
     bottom: 0%;
     width: 100%;
     height: 50px;
