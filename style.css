@@ -146,6 +146,14 @@ nav ul {
     list-style: none;
 }
 
+.contaienr{
+    width:100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+}
+
 nav ul li {
     display: flex;
     align-items: center;
