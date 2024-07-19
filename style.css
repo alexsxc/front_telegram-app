@@ -442,7 +442,7 @@ nav ul li.active:after {
     width: 100%;
     height: 60px;
     position: fixed;
-    bottom: 8% !important;
+    bottom: 6% !important;
     z-index: 99;
     left: 0;
     background-color: #ffff;

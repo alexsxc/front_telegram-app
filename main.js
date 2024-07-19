@@ -122,9 +122,15 @@ let catalog_item = document.querySelectorAll('.item_length .item')
 let num_goods = document.querySelector('.num_goods')
 
 num_goods.innerHTML = catalog_item.length
-
 let items_counter = document.querySelectorAll('.item_controls .item_q');
 let totalPriceElement = document.querySelector('.result_price span#total-price');
+let res_old_price = document.querySelector('.res_old_price');
+
+// Функция для форматирования чисел в формат российского ценника
+function formatPrice(price) {
+    return price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ' ').replace('.', ',') ;
+}
+
 function updateTotalPrice() {
     let totalPrice = 0;
     document.querySelectorAll('.catalog_cart .item_data').forEach(itemData => {
@@ -133,7 +139,14 @@ function updateTotalPrice() {
         const quantity = parseInt(itemData.querySelector('input').value);
         totalPrice += price * quantity;
     });
-    totalPriceElement.textContent = totalPrice.toFixed(2);
+
+    // Обновление totalPriceElement
+    totalPriceElement.textContent = formatPrice(totalPrice);
+
+    // Обновление res_old_price
+    const additionalAmount = 2000;
+    const totalWithAdditional = totalPrice + additionalAmount;
+    res_old_price.textContent = formatPrice(totalWithAdditional);
 }
 
 items_counter.forEach(item => {
@@ -157,14 +170,6 @@ items_counter.forEach(item => {
 
 // Initial calculation of the total price
 updateTotalPrice();
-
-// Event listener for checkout button
-
-
-
-let res_old_price = document.querySelector('.res_old_price')
-console.log(res_old_price);
-res_old_price.innerHTML = totalPriceElement.textContent + 2000
 
 
 
