@@ -10,7 +10,7 @@
 
 <body>
 
-    <div class="app">
+    <div class="app" style="overflow-x: hidden;">
         <div class="content">
             <div class="container">
                 <div class="tab tab_product">
@@ -43,9 +43,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab tab_shopping">
-                    <div style="position: fixed; z-index: 11;     margin-left: 315px;
-    margin-top: 600px;">
+                <div class="tab tab_shopping" style="position: relative;">
+                    <div style="position: fixed; z-index: 11;     bottom: 10%; right: 5%;">
                         <button onclick="openModal()" style="padding: 14px 30px; background-color: #559A53; border: none; color: aliceblue; font-size: 18px;">
                                 Добавить
                             </button>
@@ -205,7 +204,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="tab tab_orders">
+                <div class="tab tab_orders tab_active">
                     <div class="tab_title">
                         <p>Ваши заказы</p>
                     </div>
@@ -290,7 +289,7 @@
                         <section class="settings">
                             <h2>Настройки</h2>
                             <ul>
-                                <li><a href="#">Настроить менеджеров</a></li>
+                                <li><a href="#" class="managers">Настроить менеджеров</a></li>
                                 <li><a href="#">Настроить поля</a></li>
                                 <li><a href="#">Настройка сайта</a></li>
                             </ul>
@@ -483,23 +482,74 @@
                     <textarea id="description" rows="4">Фарфоровая фигурка “Лисица кицунэ”</textarea>
                 </div>
                 <div class="buttons">
-                    <button class="save-btn">Сохранить</button>
-                    <button class="delete-btn">Отмена</button>
+                    <div class="fixed_done_manipulator">
+                        <img width="30px" src="./icon/Ellipse 34.png" href="javascript:void(0);" data-tab="main" class="delete-btn" style="background-color: white;" alt="">
+                        <button class="middle_add_btn"><img width="10px" src="./icon/Plus.png" alt="">Добавить</button>
+                        <div class="quantity_goods"><button class="white_min"><img width="10px" src="./icon/minus.png"
+                                    alt=""></button>
+                            <p class="num_goods_add">1</p><button class="white_pl"><img width="10px" src="./icon/+.png"
+                                    alt=""></button>
+                        </div>
+                        <img width="30px" src="./icon/Group 46.png" alt="" class="right_arrow_btn">
+                    </div>
                 </div>
             </div>
 
         </div>
 
     </div>
+    <div class=" tab apspd">
+        <header>
+            <h1>Сибирская лавка</h1>
+            <h2>Настройка менеджеров</h2>
+        </header>
+        <section class="managers ">
+            <div class="manager ">
+                <div class="manager-info ">
+                    <div class="avatar "></div>
+                    <div class="details ">
+                        <p>Михаил</p>
+                        <p>ID: 1</p>
+                        <p>Получать сообщения: <input type="checkbox " checked disabled></p>
+                        <p>Контакт для обратной связи: <input type="checkbox " checked disabled></p>
+                    </div>
+                </div>
+            </div>
+            <div class="manager ">
+                <div class="manager-info ">
+                    <div class="avatar "></div>
+                    <div class="details ">
+                        <p>Наташа</p>
+                        <p>ID: 2</p>
+                        <p>Получать сообщения: <input type="checkbox " checked disabled></p>
+                        <p>Контакт для обратной связи: <input type="checkbox " disabled></p>
+                    </div>
+                </div>
+            </div>
+            <div class="add-manager ">
+                <button>+ Добавить менеджера</button>
+            </div>
+        </section>
+        <div class="fixed_done_manipulator fixed_done_manipulators ">
+            <img width="30px " src="./icon/Ellipse 34.png " href="javascript:void(0); " data-tab="main " class="delete-btn " style="background-color: white; " alt=" ">
+            <button class="middle_add_btn "><img width="10px " src="./icon/Plus.png " alt=" ">Добавить</button>
+            <div class="quantity_goods "><button class="white_min "><img width="10px " src="./icon/minus.png "
+                            alt=" "></button>
+                <p class="num_goods_add ">1</p><button class="white_pl "><img width="10px " src="./icon/+.png "
+                            alt=" "></button>
+            </div>
+            <img width="30px " src="./icon/Group 46.png " alt=" " class="right_arrow_btn ">
+        </div>
+    </div>
 
 
 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js "></script>
+    <script src="https://telegram.org/js/telegram-web-app.js "></script>
 
-    <script src="./admin.js"></script>
-    <script src="./main.js"></script>
+    <script src="./admin.js "></script>
+    <script src="./main.js "></script>
 </body>
 
 </html>

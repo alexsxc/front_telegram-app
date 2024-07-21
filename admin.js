@@ -43,6 +43,12 @@ jQuery(function($) {
             $('.fixed_done_manipulator_order').hide();
             return false;
         });
+        $(document).on('click', '.managers', function() {
+            $('.tab').removeClass('tab_active');
+            $('.apspd').addClass('tab_active');
+            $('.fixed_done_manipulators').show();
+            return false;
+        });
     });
 });
 

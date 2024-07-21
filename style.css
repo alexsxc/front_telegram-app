@@ -4,6 +4,10 @@ body {
     overflow-x: hidden;
 }
 
+.apspd {
+    display: none;
+}
+
 
 /* BTN */
 
@@ -146,8 +150,8 @@ nav ul {
     list-style: none;
 }
 
-.contaienr{
-    width:100%;
+.contaienr {
+    width: 100%;
     background-color: white;
     position: fixed;
     bottom: 0;
