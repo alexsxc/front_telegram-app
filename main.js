@@ -1,11 +1,11 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
 
-jQuery(function ($) {
-    $(document).ready(function () {
+jQuery(function($) {
+    $(document).ready(function() {
         $('.catalog_item').css('height', $(window).height() - 90);
 
-        $(document).on('click', '.openTab', function () {
+        $(document).on('click', '.openTab', function() {
             var thisTab = $(this).data('tab');
             var thisTabObject = $('.tab.tab_' + thisTab);
             if (!thisTabObject) {
@@ -18,26 +18,26 @@ jQuery(function ($) {
             return false;
         });
 
-        $(document).on('click', '.openProduct', function () {
+        $(document).on('click', '.openProduct', function() {
             $('.tab').removeClass('tab_active');
             $('.tab_product').addClass('tab_active');
             return false;
         });
 
-        $(document).on('click', '.item_gradient', function () {
+        $(document).on('click', '.item_gradient', function() {
             $(this).parent().parent().addClass('open');
             $(this).remove();
             return false;
         });
 
         // Новый код jQuery для обработки кликов по элементам .item
-        $(document).on('click', '.item_length .item', function () {
+        $(document).on('click', '.item_length .item', function() {
             $('.tab_orders').hide();
             $('.orders_open_window').show();
         });
 
         // Обработка клика по кнопке back___btn
-        $(document).on('click', '.back___btn', function () {
+        $(document).on('click', '.back___btn', function() {
             $('.orders_open_window').hide();
             $('.tab_orders').show();
             $('.fixed_done_manipulator_order').hide();
@@ -53,18 +53,19 @@ const modal = document.getElementById('myModal')
 const closeModal = document.querySelector('.delete-btn')
 
 function
-    openModal() {
+openModal() {
     modal.style.display = 'flex'
 }
 
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = 'none'
+window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none'
+        }
     }
-}/* 
-closeModal.onclick = function () {
-    modal.style.display = 'none'
-} */
+    /* 
+    closeModal.onclick = function () {
+        modal.style.display = 'none'
+    } */
 
 // calc
 let minus = document.querySelector('.white_min')
@@ -88,9 +89,9 @@ plus.onclick = () => {
 
 minus.onclick = () => {
     num_goods_add_num.innerHTML--
-    if (num_goods_add_num.innerHTML <= 0) {
-        num_goods_add_num.innerHTML = 1
-    }
+        if (num_goods_add_num.innerHTML <= 0) {
+            num_goods_add_num.innerHTML = 1
+        }
     console.log('click');
 }
 
@@ -128,7 +129,7 @@ let res_old_price = document.querySelector('.res_old_price');
 
 // Функция для форматирования чисел в формат российского ценника
 function formatPrice(price) {
-    return price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ' ').replace('.', ',') ;
+    return price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ' ').replace('.', ',');
 }
 
 function updateTotalPrice() {
@@ -193,4 +194,4 @@ back___btn.forEach(btn => {
 
     }
 });
-console.log(items_open_); 
+console.log(items_open_);

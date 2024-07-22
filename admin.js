@@ -32,14 +32,12 @@ jQuery(function($) {
 
         // Новый код jQuery для обработки кликов по элементам .item
         $(document).on('click', '.item_length .item', function() {
-            $('.tab_orders').hide();
             $('.orders_open_window').show();
         });
 
         // Обработка клика по кнопке back___btn
         $(document).on('click', '.back___btn', function() {
             $('.orders_open_window').hide();
-            $('.tab_orders').show();
             $('.fixed_done_manipulator_order').hide();
             return false;
         });
@@ -72,7 +70,7 @@ closeModal.onclick = function() {
 
 
 // api for create product interface on backend
-document.addEventListener('DOMContentLoaded', () => {
+/* document.addEventListener('DOMContentLoaded', () => {
     const saveBtn = document.querySelector('.save-btn');
     const deleteBtn = document.querySelector('.delete-btn');
 
@@ -143,5 +141,89 @@ document.addEventListener('DOMContentLoaded', () => {
                 editForm.style.display = 'block';
             });
         });
+    });
+}); */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const addProductButton = document.getElementById('add-product');
+    const productsContainer = document.querySelector('.products');
+
+    addProductButton.addEventListener('click', () => {
+        const newProduct = document.createElement('div');
+        newProduct.classList.add('product');
+        newProduct.style.display = 'flex';
+        newProduct.style.alignItems = 'center';
+        newProduct.style.marginBottom = '10px';
+        newProduct.innerHTML = `
+            <img src="https://via.placeholder.com/150" alt="Новый товар" style="margin-right: 20px; border-radius: 8px;">
+            <p>Название товара</p>
+            <p>Кол-во: <input type="number" value="1" min="1"></p>
+            <p>Стоимость: <input type="text" value="0 ₽"></p>
+        `;
+        productsContainer.insertBefore(newProduct, addProductButton);
+    });
+
+    const statusSelect = document.getElementById('status');
+    statusSelect.addEventListener('change', () => {
+        const status = statusSelect.value;
+        console.log('Статус изменен на:', status);
+    });
+
+    const paidCheckbox = document.getElementById('paid');
+    paidCheckbox.addEventListener('change', () => {
+        const isPaid = paidCheckbox.checked;
+        console.log('Оплачен:', isPaid);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const addManagerButton = document.getElementById('add-manager-button');
+    const addManagerForm = document.getElementById('add-manager-form');
+    const saveManagerButton = document.getElementById('save-manager');
+    const cancelButton = document.getElementById('cancel');
+
+    addManagerButton.addEventListener('click', () => {
+        addManagerForm.style.display = 'flex';
+    });
+
+    cancelButton.addEventListener('click', () => {
+        addManagerForm.style.display = 'none';
+    });
+
+    saveManagerButton.addEventListener('click', () => {
+        const name = document.getElementById('name').value;
+        const id = document.getElementById('id').value;
+        const receiveMessages = document.getElementById('receive-messages').checked;
+        const contactFeedback = document.getElementById('contact-feedback').checked;
+
+        if (name && id) {
+            const newManager = document.createElement('div');
+            newManager.classList.add('manager');
+            newManager.style.marginBottom = '20px';
+            newManager.innerHTML = `
+                <div class="manager-info" style="display: flex;">
+                    <div class="avatar" style="width: 50px; height: 50px; background-color: #ddd; border-radius: 50%; margin-right: 20px;"></div>
+                    <div class="details">
+                        <p>${name}</p>
+                        <p>ID: ${id}</p>
+                        <p>Получать сообщения: <input type="checkbox" ${receiveMessages ? 'checked' : ''} disabled></p>
+                        <p>Контакт для обратной связи: <input type="checkbox" ${contactFeedback ? 'checked' : ''} disabled></p>
+                    </div>
+                </div>
+            `;
+
+            const managersContainer = document.querySelector('.managers');
+            managersContainer.insertBefore(newManager, addManagerButton.parentElement);
+
+            // Clear form fields
+            document.getElementById('name').value = '';
+            document.getElementById('id').value = '';
+            document.getElementById('receive-messages').checked = false;
+            document.getElementById('contact-feedback').checked = false;
+
+            addManagerForm.style.display = 'none';
+        } else {
+            alert('Пожалуйста, заполните все поля.');
+        }
     });
 });

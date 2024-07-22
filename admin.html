@@ -300,96 +300,46 @@
         </div>
         <div class="orders_open_window">
 
-            <div class="back_ordernum_box">
-                <img width="30px" class="back___btn" src="./icon/Ellipse 34.png" alt="">
-                <p>Заказ: <strong>AAAOOO</strong></p>
+            <h1 style="text-align: center; margin-bottom: 20px;">Сибирская лавка</h1>
+            <div class="order" style="display: flex; flex-direction: column;">
+                <div class="back_ordernum_box">
+                    <img width="30px" class="back___btn" src="./icon/Ellipse 34.png" alt="">
+                    <p>Заказ: <strong>AAAOOO</strong></p>
+                </div>
+                <div class="status" style="margin-bottom: 20px;">
+                    <label for="status">Статус:</label>
+                    <select id="status">
+                    <option value="awaiting_payment">Ожидает оплаты</option>
+                    <option value="paid">Оплачено</option>
+                    <option value="shipped">Отправлено</option>
+                </select>
+                </div>
+                <p>Создан: 06.07.2000</p>
+                <div class="paid" style="margin-bottom: 20px;">
+                    <label for="paid">Оплачен:</label>
+                    <input type="checkbox" id="paid">
+                </div>
+                <div class="products" style="margin-bottom: 20px;">
+                    <h2>Товары</h2>
+                    <div class="item">
+                        <div class="left_block_bg_">
+                            <img width="100%" height="100%" src="./public/Group 32.png" alt="">
+                        </div>
+                        <div class="right_block_txt">
+                            <p>Фарворовая фигурка “Лисица кицуне” </p>
+                            <p>Кол-во: 3 шт.</p>
+                            <p>Стоимость: 2 399 ₽</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="add-product" style="background-color: #ff5722; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Добавить товар</button>
             </div>
-
-            <div class="starus_create_block">
-                <div class="status_elem">
-                    <p class="left_width">Статус:</p>
-                    <p class="status_color">Ожидает оплаты</p>
-                </div>
-                <div class="create_elem">
-                    <p class="left_width">Создано:</p>
-                    <p>06.07.2000</p>
-                </div>
+            <div class="order-info">
+                <h2>Информация о заказе</h2>
+                <p>Почта: <a href="mailto:deniska_zhukov_00@inbox.ru">deniska_zhukov_00@inbox.ru</a></p>
+                <p>Телефон: <a href="tel:+79648008191">+7 (964) 800 81 91</a></p>
             </div>
-            <h3 class="goods_text">Товары</h3>
-            <hr>
-            <div class="items_case">
-                <div class="item">
-                    <div class="left_block_bg_">
-                        <img width="100%" height="100%" src="./public/Group 32.png" alt="">
-                    </div>
-                    <div class="right_block_txt">
-                        <p>Фарворовая фигурка “Лисица кицуне” </p>
-                        <p>Кол-во: 3 шт.</p>
-                        <p>Стоимость: 2 399 ₽</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="left_block_bg_">
-                        <img width="100%" height="100%" src="./public/Group 32.png" alt="">
-                    </div>
-                    <div class="right_block_txt">
-                        <p>Фарворовая фигурка “Лисица кицуне” </p>
-                        <p>Кол-во: 3 шт.</p>
-                        <p>Стоимость: 2 399 ₽</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="left_block_bg_">
-                        <img width="100%" height="100%" src="./public/Group 32.png" alt="">
-                    </div>
-                    <div class="right_block_txt">
-                        <p>Фарворовая фигурка “Лисица кицуне” </p>
-                        <p>Кол-во: 3 шт.</p>
-                        <p>Стоимость: 2 399 ₽</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="left_block_bg_">
-                        <img width="100%" height="100%" src="./public/Group 32.png" alt="">
-                    </div>
-                    <div class="right_block_txt">
-                        <p>Фарворовая фигурка “Лисица кицуне” </p>
-                        <p>Кол-во: 3 шт.</p>
-                        <p>Стоимость: 2 399 ₽</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="left_block_bg_ openTab">
-                        <img width="100%" height="100%" src="./public/Group 32.png" alt="">
-                    </div>
-                    <div class="right_block_txt">
-                        <p>Фарворовая фигурка “Лисица кицуне” </p>
-                        <p>Кол-во: 3 шт.</p>
-                        <p>Стоимость: 2 399 ₽</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="left_block_bg_">
-                        <img width="100%" height="100%" src="./public/Group 32.png" alt="">
-                    </div>
-                    <div class="right_block_txt">
-                        <p>Фарворовая фигурка “Лисица кицуне” </p>
-                        <p>Кол-во: 3 шт.</p>
-                        <p>Стоимость: 2 399 ₽</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="left_block_bg_">
-                        <img width="100%" height="100%" src="./public/Group 32.png" alt="">
-                    </div>
-                    <div class="right_block_txt">
-                        <p>Фарворовая фигурка “Лисица кицуне” </p>
-                        <p>Кол-во: 3 шт.</p>
-                        <p>Стоимость: 2 399 ₽</p>
-                    </div>
-                </div>
-            </div>
-
+            <button id="contact-client" style="background-color: #ff5722; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 20px;">Написать клиенту</button>
             <h3 class="info_goods">Информация о заказе</h3>
             <hr>
             <div class="email_hrefs_box">
@@ -413,7 +363,7 @@
             <div class="fixed_done_manipulator_order">
                 <img width="30px" src="./icon/Ellipse 34.png" class="back___btn " alt="">
                 <button class="middle_add_btn"><img width="20px" src="./icon/Send.png" alt="">Задать
-                    вопрос</button>
+                        вопрос</button>
 
                 <img width="30px" style="opacity: 0;" src="./icon/Group 46.png" alt="" class="right_arrow_btn">
             </div>
@@ -503,33 +453,42 @@
             <h1>Сибирская лавка</h1>
             <h2>Настройка менеджеров</h2>
         </header>
-        <section class="managers ">
-            <div class="manager ">
-                <div class="manager-info ">
-                    <div class="avatar "></div>
-                    <div class="details ">
-                        <p>Михаил</p>
-                        <p>ID: 1</p>
-                        <p>Получать сообщения: <input type="checkbox " checked disabled></p>
-                        <p>Контакт для обратной связи: <input type="checkbox " checked disabled></p>
+        <section class="managers container">
+            <h1 style="text-align: center; margin-bottom: 20px;">Управление менеджерами</h1>
+            <div class="managers">
+                <div class="manager" style="margin-bottom: 20px;">
+                    <div class="manager-info" style="display: flex;">
+                        <div class="avatar" style="width: 50px; height: 50px; background-color: #ddd; border-radius: 50%; margin-right: 20px;"></div>
+                        <div class="details">
+                            <p>Наташа</p>
+                            <p>ID: 2</p>
+                            <p>Получать сообщения: <input type="checkbox" checked disabled></p>
+                            <p>Контакт для обратной связи: <input type="checkbox" disabled></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="manager ">
-                <div class="manager-info ">
-                    <div class="avatar "></div>
-                    <div class="details ">
-                        <p>Наташа</p>
-                        <p>ID: 2</p>
-                        <p>Получать сообщения: <input type="checkbox " checked disabled></p>
-                        <p>Контакт для обратной связи: <input type="checkbox " disabled></p>
-                    </div>
+                <div class="add-manager" style="margin-top: 20px;">
+                    <button id="add-manager-button" style="background-color: #ff5722; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">+ Добавить менеджера</button>
                 </div>
-            </div>
-            <div class="add-manager ">
-                <button>+ Добавить менеджера</button>
             </div>
         </section>
+        <div id="add-manager-form" style="display: none; background-color: rgba(0, 0, 0, 0.5); position: fixed; top: 0; left: 0; width: 100%; height: 100%; align-items: center; justify-content: center;">
+            <div style="background-color: #fff; padding: 20px; border-radius: 8px; width: 400px;">
+                <h2>Добавить менеджера</h2>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                <label for="id">ID:</label>
+                <input type="text" id="id" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                <label for="receive-messages">Получать сообщения:</label>
+                <input type="checkbox" id="receive-messages" style="margin-bottom: 10px;">
+                <label for="contact-feedback">Контакт для обратной связи:</label>
+                <input type="checkbox" id="contact-feedback" style="margin-bottom: 20px;">
+                <div style="text-align: right;">
+                    <button id="save-manager" style="background-color: #4caf50; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Сохранить</button>
+                    <button id="cancel" style="background-color: #f44336; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Отмена</button>
+                </div>
+            </div>
+        </div>
         <div class="fixed_done_manipulator fixed_done_manipulators ">
             <img width="30px " src="./icon/Ellipse 34.png " href="javascript:void(0); " data-tab="main " class="delete-btn " style="background-color: white; " alt=" ">
             <button class="middle_add_btn "><img width="10px " src="./icon/Plus.png " alt=" ">Добавить</button>
