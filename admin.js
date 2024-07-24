@@ -47,6 +47,18 @@ jQuery(function($) {
             $('.fixed_done_manipulators').show();
             return false;
         });
+        $(document).on('click', '.fields', function() {
+            $('.tab').removeClass('tab_active');
+            $('.zcx').addClass('tab_active');
+            $('.fixed_done_manipulators').show();
+            return false;
+        });
+        $(document).on('click', '.settings', function() {
+            $('.tab').removeClass('tab_active');
+            $('.sad').addClass('tab_active');
+            $('.fixed_done_manipulators').show();
+            return false;
+        });
     });
 });
 

@@ -290,8 +290,8 @@
                             <h2>Настройки</h2>
                             <ul>
                                 <li><a href="#" class="managers">Настроить менеджеров</a></li>
-                                <li><a href="#">Настроить поля</a></li>
-                                <li><a href="#">Настройка сайта</a></li>
+                                <li><a href="#" class="fields">Настроить поля</a></li>
+                                <li><a href="#" class="settings">Настройка сайта</a></li>
                             </ul>
                         </section>
                     </div>
@@ -370,7 +370,7 @@
         </div>
         <nav>
             <div class="contaienr">
-                <ul>
+                <ul style="padding-left: 0px;">
                     <li class="active">
                         <a href="javascript:void(0);" data-tab="orders" class="openTab">
                             <i class="icon icon_orders"></i>
@@ -427,7 +427,7 @@
                     <label for="active">Активен</label>
                     <input type="checkbox" id="active">
                 </div>
-                <div class="input-group">
+                <div class="input-group" style="margin-bottom: 100px;">
                     <label for="description">Описание</label>
                     <textarea id="description" rows="4">Фарфоровая фигурка “Лисица кицунэ”</textarea>
                 </div>
@@ -446,6 +446,9 @@
             </div>
 
         </div>
+
+    </div>
+    <div class=" tab zcx">
 
     </div>
     <div class=" tab apspd">
@@ -498,6 +501,25 @@
                             alt=" "></button>
             </div>
             <img width="30px " src="./icon/Group 46.png " alt=" " class="right_arrow_btn ">
+        </div>
+    </div>
+    <div class=" tab sad">
+        <div style="padding: 20px;">
+            <header style="text-align: center; padding: 10px 0;">
+                <h1 style="margin: 0; font-size: 24px;">Сибирская лавка</h1>
+            </header>
+            <main style="max-width: 400px; margin: 0 auto; background-color: #fff; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                <h2 style="margin: 0 0 20px; font-size: 20px; text-align: center;">Настройка сайта</h2>
+                <div style="margin-bottom: 20px;">
+                    <label for="min-order" style="display: block; font-weight: bold; margin-bottom: 5px;">Минимальная сумма заказа</label>
+                    <input type="number" id="min-order" value="60" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="payment-token" style="display: block; font-weight: bold; margin-bottom: 5px;">Токен оплаты</label>
+                    <textarea id="payment-token" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; height: 100px;">Фарворовая фигурка “Лисица кицунэ”</textarea>
+                </div>
+                <button style="display: block; width: 100%; padding: 10px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Сохранить</button>
+            </main>
         </div>
     </div>
 
