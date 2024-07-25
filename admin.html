@@ -206,7 +206,7 @@
                 </div>
                 <div class="tab tab_orders tab_active">
                     <div class="tab_title">
-                        <p>Ваши заказы</p>
+                        <p>Заказы</p>
                     </div>
                     <div class="catalog catalog_rows item_length">
                         <div class="item">
@@ -303,7 +303,7 @@
             <h1 style="text-align: center; margin-bottom: 20px;">Сибирская лавка</h1>
             <div class="order" style="display: flex; flex-direction: column;">
                 <div class="back_ordernum_box">
-                    <img width="30px" class="back___btn" src="./icon/Ellipse 34.png" alt="">
+                    <img width="30px" class="back___btn order-btn" src="./icon/Ellipse 34.png" alt="">
                     <p>Заказ: <strong>AAAOOO</strong></p>
                 </div>
                 <div class="status" style="margin-bottom: 20px;">
@@ -369,7 +369,7 @@
             </div>
         </div>
         <nav>
-            <div class="contaienr">
+            <div class="contaienr navig">
                 <ul style="padding-left: 0px;">
                     <li class="active">
                         <a href="javascript:void(0);" data-tab="orders" class="openTab">
@@ -449,7 +449,23 @@
 
     </div>
     <div class=" tab zcx">
-
+        <div style="padding: 20px;">
+            <header style="text-align: center; padding: 10px 0;">
+                <h1 style="margin: 0; font-size: 24px;">Сибирская лавка</h1>
+            </header>
+            <main style="max-width: 400px; margin: 0 auto; background-color: #fff; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                <h2 style="margin: 0 0 20px; font-size: 20px; text-align: center;">Настройка полей</h2>
+                <div style="margin-bottom: 20px;">
+                    <label for="min-order" style="display: block; font-weight: bold; margin-bottom: 5px;">Минимальная сумма заказа</label>
+                    <input type="number" id="min-order" value="60" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="payment-token" style="display: block; font-weight: bold; margin-bottom: 5px;">Токен оплаты</label>
+                    <textarea id="payment-token" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; height: 100px;">Фарворовая фигурка “Лисица кицунэ”</textarea>
+                </div>
+                <button style="display: block; width: 100%; padding: 10px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Сохранить</button>
+            </main>
+        </div>
     </div>
     <div class=" tab apspd">
         <header>
@@ -471,7 +487,7 @@
                     </div>
                 </div>
                 <div class="add-manager" style="margin-top: 20px;">
-                    <button id="add-manager-button" style="background-color: #ff5722; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">+ Добавить менеджера</button>
+                    <!-- <button id="add-manager-button" style="background-color: #ff5722; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">+ Добавить менеджера</button> -->
                 </div>
             </div>
         </section>
