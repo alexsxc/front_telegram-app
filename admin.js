@@ -182,16 +182,57 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Статус изменен на:", status);
   });
 
-  const paidCheckbox = document.getElementsByClassName("paid");
-  paidCheckbox.addEventListener("change", () => {
-    const isPaid = paidCheckbox.checked;
-    console.log("Оплачен:", isPaid);
-  });
-});
-const paidCheckbox = document.getElementsByClassName("paids");
-paidCheckbox.addEventListener("change", () => {
-  const isPaid = paidCheckbox.checked;
-  console.log("Оплачен:", isPaid);
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const addManagerButton = document.getElementById('add-manager-button');
+    const addManagerForm = document.getElementById('add-manager-form');
+    const saveManagerButton = document.getElementById('save-manager');
+    const cancelButton = document.getElementById('cancel');
+
+    addManagerButton.addEventListener('click', () => {
+        addManagerForm.style.display = 'flex';
+    });
+
+    cancelButton.addEventListener('click', () => {
+        addManagerForm.style.display = 'none';
+    });
+
+    saveManagerButton.addEventListener('click', () => {
+        const name = document.getElementById('name').value;
+        const id = document.getElementById('id').value;
+        const receiveMessages = document.getElementById('receive-messages').checked;
+        const contactFeedback = document.getElementById('contact-feedback').checked;
+
+        if (name && id) {
+            const newManager = document.createElement('div');
+            newManager.classList.add('manager');
+            newManager.style.marginBottom = '20px';
+            newManager.innerHTML = `
+                <div class="manager-info" style="display: flex;">
+                    <div class="avatar" style="width: 50px; height: 50px; background-color: #ddd; border-radius: 50%; margin-right: 20px;"></div>
+                    <div class="details">
+                        <p>${name}</p>
+                        <p>ID: ${id}</p>
+                        <p>Получать сообщения: <input type="checkbox" ${receiveMessages ? 'checked' : ''} disabled></p>
+                        <p>Контакт для обратной связи: <input type="checkbox" ${contactFeedback ? 'checked' : ''} disabled></p>
+                    </div>
+                </div>
+            `;
+
+            const managersContainer = document.querySelector('.managers');
+            managersContainer.insertBefore(newManager, addManagerButton.parentElement);
+
+            // Clear form fields
+            document.getElementById('name').value = '';
+            document.getElementById('id').value = '';
+            document.getElementById('receive-messages').checked = false;
+            document.getElementById('contact-feedback').checked = false;
+
+            addManagerForm.style.display = 'none';
+        } else {
+            alert('Пожалуйста, заполните все поля.');
+        }
+    });
+});
